@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ProductionCalendarModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ProductionCalendarModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfcountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="country" nillable="true" type="tns:country" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcountry" nillable="true" type="tns:ArrayOfcountry" />
+  <xs:complexType name="country">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryId" type="xs:short" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="country" nillable="true" type="tns:country" />
+  <xs:complexType name="ArrayOfcalendar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="calendar" nillable="true" type="tns:calendar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcalendar" nillable="true" type="tns:ArrayOfcalendar" />
+  <xs:complexType name="calendar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CalendarId" type="xs:short" />
+      <xs:element minOccurs="0" name="CalendarName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryId" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="calendar" nillable="true" type="tns:calendar" />
+  <xs:complexType name="ArrayOfdtype">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dtype" nillable="true" type="tns:dtype" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdtype" nillable="true" type="tns:ArrayOfdtype" />
+  <xs:complexType name="dtype">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DTypeId" type="xs:short" />
+      <xs:element minOccurs="0" name="DTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dtype" nillable="true" type="tns:dtype" />
+  <xs:complexType name="ArrayOfholiday">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="holiday" nillable="true" type="tns:holiday" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfholiday" nillable="true" type="tns:ArrayOfholiday" />
+  <xs:complexType name="holiday">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HolidayId" type="xs:short" />
+      <xs:element minOccurs="0" name="HolidayName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="holiday" nillable="true" type="tns:holiday" />
+  <xs:complexType name="ArrayOfregion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="region" nillable="true" type="tns:region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfregion" nillable="true" type="tns:ArrayOfregion" />
+  <xs:complexType name="region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryId" type="xs:short" />
+      <xs:element minOccurs="0" name="RegionId" type="xs:short" />
+      <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="region" nillable="true" type="tns:region" />
+</xs:schema>
